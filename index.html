@@ -535,6 +535,9 @@
 </div>
 
 <script>
+  // ← הדביקי את ה-API key שלך כאן בין הגרשיים:
+  const OWNER_KEY = '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';
+
   let currentFile = null, currentPrompt = '', currentDNA = '';
 
   function toggleApi() {
@@ -556,7 +559,7 @@
     }, 1500);
   }
 
-  function getKey() { return localStorage.getItem('assi_key') || ''; }
+  function getKey() { return OWNER_KEY || localStorage.getItem('assi_key') || ''; }
 
   const zone = document.getElementById('uploadZone');
   zone.addEventListener('dragover', e => { e.preventDefault(); zone.classList.add('drag-over'); });
